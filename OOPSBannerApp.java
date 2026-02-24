@@ -1,16 +1,15 @@
 /**
  * OOPSBannerApp
- * Displays "OOPS" banner using Array and Loop.
+ * Displays "OOPS" banner using concise array initialization.
  *
  * @author Raj Bardhan
- * @version 4.0
+ * @version 5.0
  */
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
 
         String[] banner = {
-
                 String.join(" ", " ***** ", " ***** ", " ***** ", " ***** "),
                 String.join(" ", "*     *", "*     *", "*     *", "*     *"),
                 String.join(" ", "*     *", "*     *", "*     *", "*      "),
@@ -20,7 +19,6 @@ public class OOPSBannerApp {
                 String.join(" ", " ***** ", " ***** ", "*      ", " ***** ")
         };
 
-        // Enhanced for-loop to print banner
         for (String line : banner) {
             System.out.println(line);
         }
