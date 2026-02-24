@@ -1,26 +1,59 @@
 /**
  * OOPSBannerApp
- * Displays "OOPS" banner using concise array initialization.
+ * Displays "OOPS" banner using static helper methods.
  *
  * @author Raj Bardhan
- * @version 5.0
+ * @version 6.0
  */
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
 
-        String[] banner = {
-                String.join(" ", " ***** ", " ***** ", " ***** ", " ***** "),
-                String.join(" ", "*     *", "*     *", "*     *", "*     *"),
-                String.join(" ", "*     *", "*     *", "*     *", "*      "),
-                String.join(" ", "*     *", "*     *", " ***** ", " ***** "),
-                String.join(" ", "*     *", "*     *", "*      ", "      *"),
-                String.join(" ", "*     *", "*     *", "*      ", "*     *"),
-                String.join(" ", " ***** ", " ***** ", "*      ", " ***** ")
-        };
+        String[] o = buildO();
+        String[] p = buildP();
+        String[] s = buildS();
 
-        for (String line : banner) {
-            System.out.println(line);
+        for (int i = 0; i < o.length; i++) {
+            System.out.println(o[i] + " " + o[i] + " " + p[i] + " " + s[i]);
         }
+    }
+
+    // Builds pattern for letter O
+    public static String[] buildO() {
+        return new String[]{
+                " ***** ",
+                "*     *",
+                "*     *",
+                "*     *",
+                "*     *",
+                "*     *",
+                " ***** "
+        };
+    }
+
+    // Builds pattern for letter P
+    public static String[] buildP() {
+        return new String[]{
+                " ***** ",
+                "*     *",
+                "*     *",
+                " ***** ",
+                "*      ",
+                "*      ",
+                "*      "
+        };
+    }
+
+    // Builds pattern for letter S
+    public static String[] buildS() {
+        return new String[]{
+                " ***** ",
+                "*     *",
+                "*      ",
+                " ***** ",
+                "      *",
+                "*     *",
+                " ***** "
+        };
     }
 }
