@@ -1,33 +1,28 @@
 /**
  * OOPSBannerApp
- * Displays "OOPS" banner using String.join() for better memory handling.
+ * Displays "OOPS" banner using Array and Loop.
  *
  * @author Raj Bardhan
- * @version 3.0
+ * @version 4.0
  */
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
 
-        System.out.println(String.join(" ",
-                " ***** ", " ***** ", " ***** ", " ***** "));
+        String[] banner = {
 
-        System.out.println(String.join(" ",
-                "*     *", "*     *", "*     *", "*     *"));
+                String.join(" ", " ***** ", " ***** ", " ***** ", " ***** "),
+                String.join(" ", "*     *", "*     *", "*     *", "*     *"),
+                String.join(" ", "*     *", "*     *", "*     *", "*      "),
+                String.join(" ", "*     *", "*     *", " ***** ", " ***** "),
+                String.join(" ", "*     *", "*     *", "*      ", "      *"),
+                String.join(" ", "*     *", "*     *", "*      ", "*     *"),
+                String.join(" ", " ***** ", " ***** ", "*      ", " ***** ")
+        };
 
-        System.out.println(String.join(" ",
-                "*     *", "*     *", "*     *", "*      "));
-
-        System.out.println(String.join(" ",
-                "*     *", "*     *", " ***** ", " ***** "));
-
-        System.out.println(String.join(" ",
-                "*     *", "*     *", "*      ", "      *"));
-
-        System.out.println(String.join(" ",
-                "*     *", "*     *", "*      ", "*     *"));
-
-        System.out.println(String.join(" ",
-                " ***** ", " ***** ", "*      ", " ***** "));
+        // Enhanced for-loop to print banner
+        for (String line : banner) {
+            System.out.println(line);
+        }
     }
 }
